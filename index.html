@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- audio set -->
+    <audio autoplay loop>
+        <source src="img/211413__zagi2__metal-loop-2.wav" type="audio/wav">
+    </audio>
+
+    <!-- first screen -->
+    <div id="screen1">
+        <video autoplay muted loop id="myVideo">
+            <source src="img/zombie-back.mp4" type="video/mp4">
+        </video>
+        <div class="wall1">
+            <div id="innerTop">
+                <h1>Doom Triggers: Sweat and blood</h1>
+            </div>
+            <div id="innerMiddle">
+                <h1 onclick="screenSwitch('screen2')">START GAME!</h1>
+            </div>
+            <div id="innerBotton">
+                <h1>Created and designed by: Jackson Almeida</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- second screen -->
+    <div id="screen2">
+        <div class="infoContent">
+            <h1>Choose your character</h1>
+        </div>
+        <div class="infoContent">
+            <h1 id="clock">60</h1>
+        </div>
+        <div class="characterContent">
+            <div class="charac" onclick="chooseCharacter(1)">
+                <div>
+                    <h3>John Wick</h3>
+                </div>
+                <img class="photoSel" src="img/john.webp" alt="John Wick">
+            </div>
+            <div class="charac" onclick="chooseCharacter(2)">
+                <div>
+                    <h3>Michael Myers</h3>
+                </div>
+                <img class="photoSel" src="img/myers.png" alt="Michael Myers">
+            </div>
+            <div class="charac" onclick="chooseCharacter(3)">
+                <div>
+                    <h3>Rick Grimes</h3>
+                </div>
+                <img class="photoSel" src="img/rick.png" alt="Rick Grimes">
+            </div>
+        </div>
+    </div>
+
+    <!-- third screen  -->
+   
+    <div id="screen3">
+        <div id="tittle3">
+            <h1 id="choosenChar"></h1>
+        </div>
+        <div id="quickNote">
+            <h3>Tip: You just need to CLICK!</h3>
+        </div>
+        <div id="vsCharImg">
+
+        </div>
+    </div>
+
+    <!-- VIDEOGAME -->
+
+    <!-- fourth screen -->
+
+    <div id="screen4">
+        <div id="gameFrame">
+            <div id="healthBar"></div>
+            <div class="enemy" id="enemy1">
+                <img onclick="kill(this), winning(this)" class="zombPhoto" src="img/zomb.png" alt="">
+            </div>
+            <div class="enemy" id="enemy2">
+                <img onclick="kill(this), winning(this)" class="zombPhoto2" src="img/zomb2.png" alt="">
+            </div>
+            <div class="enemy" id="enemy3">
+                <img onclick="kill(this), winning(this)" class="zombPhoto3" src="img/zomb4.png" alt="">
+            </div>
+            <div class="enemy" id="enemy4">
+                <img onclick="kill(this), winning(this)" class="zombPhoto4" src="img/zomb3.png" alt="">
+            </div>
+        </div>
+        <div onclick="randomAttacks()" id="restartButton">
+            <h3>Start</h3>
+        </div>
+    </div>
+    <!-- -------------------------------------------------- -->
+    <!-- fifth screen  -->
+    <div id="screen5" onclick="screenSwitch('screen1')">
+        <video autoplay muted loop id="myVideo">
+            <source src="img/zombie-back.mp4" type="video/mp4">
+        </video>
+        <div class="wall5">
+            <div id="item5-1">
+                <h1 id="innerItem5-1">VICTORY!</h1>
+            </div>
+            <div id="item5-2">
+                <!-- onclick="restarValues()" -->
+                <h3 id="innerItem5-2">---------- RESTART ----------</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/funcionalities.js"></script>
+    <script src="js/Character.js"></script>
+</body>
+
+</html>
