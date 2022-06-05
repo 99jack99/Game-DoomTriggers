@@ -43,7 +43,7 @@ In this game, is added a lot of functions, and methodologies practised in Geeksh
 <hr>
 *Not everything is included
 <br>
-*You can see it on: <em>https://99jack99.github.io/MenuResponsive/</em>
+*You can see it on: <em> https://99jack99.github.io/Game-DoomTriggers/</em>
 <br>
 <br>
 
