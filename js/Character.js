@@ -1,11 +1,27 @@
 class Character{
 
-    constructor(characterName, gunName, health /* gunDmg, gunDelay */){
+    constructor(characterName, gunName, health){
         this.characterName = characterName;
         this.gunName = gunName;
         this.health = health;
-        /* this.gunDmg = gunDmg;
-        this.gunDelay = gunDelay; */
+    }
+
+    
+    updateHealthPointsChar = (points)  => {
+
+        setTimeout(() => {
+    
+            healthPoints = this.health - points;
+            let healthBar = document.getElementById('healthBar');
+    
+            healthBar.style.width = healthPoints + "%";
+            
+    
+            if (healthPoints < -1) {
+                return losing();
+            }
+    
+        }, 500);
     }
 
 };
